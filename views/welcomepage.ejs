@@ -1,0 +1,46 @@
+<%- include("partials/tasks-header") -%>
+  <div class="jumbotron" id="welcome-jumb">
+    <h1 class="display-4">Welcome to MyTasks !</h1>
+
+    <hr class="my-4">
+
+    <div>
+
+      <h2 class="section-heading">Functionalities</h2>
+      <p style="text-align: center;">Easily create and betterly manage your tasks of various types </p>
+
+      <div class="row">
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-plus-circle fa-3x"></i>
+          <h3 class="feature-title">Create</h3>
+          <p style="text-align: center;">You can easily create a new task by NewTask option</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-tasks fa-3x"></i>
+          <h3 class="feature-title">Manage</h3>
+          <p style="text-align: center;">View the whole picture of your task lists and details of the individual list as well</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-calendar-alt fa-3x"></i>
+          <h3 class="feature-title">Intelligentized</h3>
+          <p style="text-align: center;">Classify tasks into 3 kinds - tasks due today, tasks pasted due and tasks in future</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <a class="btn btn-outline-primary btn-block btn-feature" href="/newTask" role="button">Create</a>
+        </div>
+        <div class="col-lg-4">
+          <a class="btn btn-outline-primary btn-block btn-feature" href="/allTasks" role="button">View</a>
+        </div>
+        <div class="col-lg-4">
+          <a class="btn btn-outline-primary btn-block btn-feature" href="/tasks" role="button">Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include("partials/tasks-footer") -%>

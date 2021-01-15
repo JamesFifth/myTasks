@@ -1,0 +1,56 @@
+<%- include("partials/tasks-header") -%>
+
+  <div class="box" id="heading">
+    <div id="list-head">
+      <h3>
+        Welcome to your <span style="color: #9133e9;">
+          <%= listTitle %>
+        </span> list
+      </h3>
+      <div class="card" id="wel-banner">
+        <!-- <div class="card-body"> -->
+        <p id="p"> If you have already done you can click
+          <i class="far fa-square"></i> to delete a task</p>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- show lists -->
+    <% if (newListTasks.length == 0) { %>
+      <h1 style="color: #797bfc; padding: 10%; font-family: 'Montserrat';">No tasks past due, good job! <i class="far fa-thumbs-up"></i></h1> 
+    <% } %> 
+    <% newListTasks.forEach(function(task){ %>
+      <div id="break-line">
+        <form action="/deletepast" method="post">
+          <div class="task row">
+            <div class="col-lg-1">
+              <input type="checkbox" name="checkbox" value="<%=task.id%>" onChange="this.form.submit()">
+            </div>
+            <div class="col-lg-11">
+              <div class="row">
+                <div class="col-lg-8">
+                  <p>
+                    <span style="color: hsl(219, 89%, 59%); font-size: 1.5rem;">
+                      <%=task.name%>
+                    </span>
+                    <!-- <br> -->
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <p>
+                    <span style="color: #515153;">Deadline: <%= task.deadline[0] %>-<%= task.deadline[1] %>-<%=
+                            task.deadline[2] %>
+                            <%= task.deadline[3] < 10 ? ("0"+task.deadline[3]) : task.deadline[3]%>:<%= task.deadline[4]
+                                < 10 ? ("0"+task.deadline[4]) : task.deadline[4] %></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" name="belongToListName" value="<%= task.listname %>"></input>
+          <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+        </form>
+      </div>
+      <% }) %>
+        
+  </div>
+  <%- include("partials/tasks-footer") -%>

@@ -1,0 +1,254 @@
+html {
+  background-color: #ffffff;
+  font-family: 'Montserrat';
+}
+
+#nav-section{
+  background-color: #9193e2;
+  padding: 0% 5% 0% 5%;
+}
+
+#nav-logo{
+  color: #f3dc09;
+  font-family: "Ubuntu";
+  /* padding: 1px; */
+  font-size: 2rem;
+}
+
+.nav-item{
+  margin: 2%;
+}
+
+#nav-links{
+  color: rgb(204, 204, 204);
+  font-family: "Montserrat";
+  padding: 0px;
+  font-size: 20px;
+}
+
+h3 {
+  color: rgb(80, 70, 70);
+  font-family: "Ubuntu";
+  padding: 0px;
+  /* border-bottom: 1px solid #1f51f3; */
+}
+
+.box {
+  width: 70%;
+  margin: 50px auto;
+  background: white;
+  border-radius: 1px;
+  /* box-shadow: 5px 5px 50px -30px #8585e7; */
+  padding: 0%;
+}
+
+.box1 {
+  width: 100%;
+  margin: 50px auto;
+  background: white;
+  border-radius: 1px;
+  /* box-shadow: 5px 5px 50px -30px #8585e7; */
+  padding: 0%;
+}
+
+#tasks-container{
+  padding: 0% 3% 0% 3%;
+  /* margin: 0% auto; */
+}
+
+#p{
+  padding: 0%;
+  font-family: "Montserrat";
+  font-size: 10 px;
+  text-align: center;
+}
+
+#wel-banner{
+  padding: 0%;
+  border: none;
+  width: 70%;
+  margin: auto;
+  background-color: rgb(245, 176, 176);
+}
+
+#heading {
+  background-color: #c9c9f0;
+  text-align: center;
+  /* This can adjust the space between forms */
+  margin: 2% auto;
+}
+
+.task {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Montserrat";
+}
+
+.task1 {
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid rgb(255, 255, 255); */
+  border-bottom: 1px solid #ffffff;
+  font-family: "Montserrat";
+}
+
+.task:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+  text-align: left;
+  /* display:inline; */
+}
+
+form.task {
+  text-align: left;
+  margin-left: 10px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  /* width: 10%; */
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #8585e7;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  /* width: 583px; */
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+#delete-icon{
+  color: rgb(93, 85, 44);
+}
+
+#font-set{
+  font-family: "Montserrat";
+}
+
+#newOne{
+  width: 70%;
+  margin: auto;
+  padding-top: 10%;
+  background-color: #fff;
+  font-family: "Montserrat";
+}
+
+#break-line{
+  padding: 0%;
+  text-align: left;
+  /* Important here to display many lines within div element */
+  word-wrap: break-word;
+}
+
+#list-head{
+  /* border-bottom: 2px solid #9133e9;
+  border-top: 2px solid #9133e9;
+  border-left: 2px solid #9133e9;
+  border-right: 2px solid #9133e9; */
+  background-color: rgb(245, 176, 176);
+}
+
+#list-head1{
+  /* border-bottom: 2px solid #9133e9;
+  border-top: 2px solid #9133e9;
+  border-left: 2px solid #9133e9;
+  border-right: 2px solid #9133e9; */
+  background-color: rgb(245, 176, 176);
+}
+
+ /* footer */
+ #footer{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1% 15%;
+  /* padding-top: 5%; */
+  /* margin-top: 10%; */
+}
+
+#footer-p{
+  color:rgb(129, 131, 133);
+  font-family: "Montserrat";
+  font-size: small;
+}
+
+#nolist{
+  margin: auto;
+  background-color: #fff;
+  font-family: "Montserrat";
+  width: 70%;
+  padding-top: 10%;
+}
+
+#welcome-jumb{
+  background-color: #fff;
+  padding: 2% 10%;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+.feature-box{
+  padding: 2%;
+  /* text-align: center; */
+}
+
+.icon {
+  color: #a3a4ff;
+  margin-bottom: 1rem;
+}
+
+.icon:hover{
+  color: #797bfc;
+}
+
+.btn-feature{
+  width: 60%; 
+  margin: auto;
+  font-family: 'Montserrat';
+}

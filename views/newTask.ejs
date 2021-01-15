@@ -1,0 +1,15 @@
+<%- include("partials/tasks-header") -%>
+
+<div class="jumbotron" id="newOne">
+    <h1 class="display-4" style="text-align: left;">Create your new list here !</h1>
+    <hr>
+    <form class="form-inline" method="POST" action="/newTask">
+        <div class="form-group mx-sm-3 mb-2">
+          <label style="font-size: 1.5rem; font-family: 'Montserrat';">Enter your list name here </label>
+          <input type="text" class="form-control" placeholder="List name" name="listname">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">+</button>
+    </form>
+</div>
+
+<%- include("partials/tasks-footer") -%>

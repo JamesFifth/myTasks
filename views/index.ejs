@@ -1,0 +1,81 @@
+<%- include("partials/cover-header") -%>
+
+    <!-- title -->
+
+    <section id="title">
+
+        <div class="container-fluid">
+
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+            
+                <a class="navbar-brand" href="" id="nav-logo"> MyTasks</a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup" id="nav-links">Sign up</a>
+                    </li>
+                </ul>
+            
+            </nav>
+
+
+            <!-- Title -->
+
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <h1 class="h1-heading">One place to manage all your tasks</h1>
+                    <a type="button" class="btn btn-lg btn-dark" href="/signup"><i class="fas fa-external-link-alt"></i>  Explore by creating an account</a>
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- forms -->
+                    <div class="container" id="login-form">
+                        <!-- title -->
+                        <h1>Please sign in </h1>
+                        <hr>
+
+                        <!-- left form -->
+                        <div id="inner-form">
+                            <!-- form -->
+                            <form action="/signin" method="POST">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" name="username" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password"
+                                        placeholder="Enter password">
+                                </div>
+                                <button type="submit" class="btn btn-block btn-lg btn-primary">Start
+                                    managing your tasks</button>
+                            </form>
+                            <hr>
+                            <!-- <a type="submit" class="btn btn-block btn-lg btn-success btn-social btn-google"
+                                href="/auth/google">or
+                                <i class="fab fa-google"></i>
+                                Sign In with Google</a> -->
+                            <!-- social buttons -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="col-6 container-fluid">
+            <p>© Copyright 2021 MyTasks by Ming Wu</p>
+        </div>
+    </footer>
+
+    <%- include("partials/cover-footer") -%>

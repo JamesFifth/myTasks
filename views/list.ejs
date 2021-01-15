@@ -1,0 +1,70 @@
+<%- include("partials/tasks-header") -%>
+
+  <div class="box" id="heading">
+    <div id="list-head">
+      <h3>
+        Welcome to your <span style="color: #9133e9;">
+          <%= listTitle %>
+        </span> list
+      </h3>
+      <div class="card" id="wel-banner">
+        <!-- <div class="card-body"> -->
+        <p id="p">Click the <i class="fas fa-plus-circle" style="color: #8585e7;"></i> button to add a new task. Click
+          <i class="far fa-square"></i> to delete an task</p>
+        <!-- </div> -->
+      </div>
+      <% if (newListTasks.length === 0) { %>
+        <h1 style="color: #797bfc; padding: 5%; background-color: rgb(235, 230, 230); font-family: 'Montserrat';">Empty list, you can add one bellow <i class="far fa-arrow-alt-circle-down"></i></h1> 
+      <% }; %>  
+    </div>
+    <!-- show lists -->
+    <% newListTasks.forEach(function(task){ %>
+      <div id="break-line">
+        <form action="/delete" method="post">
+          <div class="task row">
+            <div class="col-lg-1">
+              <input type="checkbox" name="checkbox" value="<%=task.id%>" onChange="this.form.submit()">
+            </div>
+            <div class="col-lg-11">
+              <div class="row">
+                <div class="col-lg-8">
+                  <p>
+                    <span style="color: hsl(219, 89%, 59%); font-size: 1.5rem;">
+                      <%=task.name%>
+                    </span>
+                    <!-- <br> -->
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <p>
+                    <span style="color: #515153;">Deadline: <%= task.deadline[0] %>-<%= task.deadline[1] %>-<%=
+                            task.deadline[2] %>
+                            <%= task.deadline[3] < 10 ? ("0"+task.deadline[3]) : task.deadline[3]%>:<%= task.deadline[4]
+                                < 10 ? ("0"+task.deadline[4]) : task.deadline[4] %></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" name="belongToListName" value="<%= task.listname %>"></input>
+          <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+        </form>
+      </div>
+      <% }) %>
+        <!-- add items to list -->
+        <div id="getIput">
+          <form action="/tasks" method="post">
+            <input type="text" 
+            name="newTask" placeholder="New Task" autocomplete="off">
+            <!-- date -->
+            <label id="font-set">Deadline: date - </label>
+            <input id="font-set" type="date" name="deadline_date" value="" min="2021-01-01" max="2030-12-31" required>
+            <!-- time -->
+            <label id="font-set"> & time - </label>
+            <input id="font-set" type="time" name="deadline_time" required>
+
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+          </form>
+        </div>
+  </div>
+  <%- include("partials/tasks-footer") -%>

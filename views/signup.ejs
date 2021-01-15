@@ -1,0 +1,55 @@
+<%- include("partials/sign-header") -%>
+  <!-- header -->
+  <div id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="my-nav">
+      <h1 style="font-family: 'Ubuntu'; color: rgb(255, 255, 255);">MyTasks</h1>
+      <!-- togger -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- links -->
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ml-auto">
+          <!-- home -->
+          <li class="nav-item">
+            <a class="nav-link" href="/" id="nav-links">Home</a>
+          </li>
+          <!-- signin -->
+          <li class="nav-item">
+            <a class="nav-link" href="/" id="nav-links">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- forms -->
+  <div class="container" id="login-form">
+    <!-- title -->
+    <h1>Let's go!</h1>
+    <div id="inner-form">
+      <!-- form -->
+      <form action="/signup" method="POST">
+        <div class="form-group">
+          <label for="account">User name</label>
+          <input type="text" class="form-control" name="account" placeholder="Enter user name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="username" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-block btn-lg btn-primary" id="left-button">Play with MyTasks now</button>
+      </form>
+      <hr>
+      <!-- <a type="submit" class="btn btn-block btn-lg btn-success btn-social btn-google" id="left-button"
+        href="/auth/google">or
+        <i class="fab fa-google"></i>
+        Sign Up with Google</a> -->
+    </div>
+  </div>
+
+  <%- include("partials/sign-header") -%>
