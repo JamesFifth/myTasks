@@ -4,4 +4,4 @@ This App uses HTML/CSS/JS as the front end and Node.js/MongoDB as the backend.
 
 Please see the website here 
 
-https://agile-wave-92773.herokuapp.com/
+https://my-tasks-app-by-mingwu.herokuapp.com/
